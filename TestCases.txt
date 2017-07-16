@@ -18,14 +18,14 @@ Then VM is in Suspended state.
 Scenario 3: Stopping a Running VM
 Given Running VM 
 And A sample project that already has JSON API
-When I Write
+When I call above API with runstate=Stopped
 Then VM is in stopped state.
 
 Scenario 4: Restarting a suspended VM
-Given Running VM 
+Given Supended VM 
 And A sample project that already has JSON API
-When I Write
-Then VM is in stopped state.
+When I call above API with runstate=Running
+Then VM is in Running state.
 
 Scenario 5: VM is not starting
 Given Stopped VM
@@ -35,7 +35,7 @@ Then It gives the error “The operation cannot be performed at this time. Pleas
 
 Scenario 6: Suspended VM can’t be stop
 Given A VM in Suspended state
-When I tried to stop That
+When I call above API with runstate=Stopped
 Then “Error message will be displayed”
 
 
@@ -43,6 +43,7 @@ Scenario 6: No action is performed if the status is “Busy”
 Given VM is in Suspended State
 When I tried any operation “Stop”,” Start”, Suspend”
 Then No action is performed
+And It gives Error message
 
 Scenario 7: After 30 minutes VM will go in Suspended state
 Given A VM is Running 
