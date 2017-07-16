@@ -1,5 +1,4 @@
-Story: Using REST API write a code to Run, Suspend, Resume, Stop the environment 
-
+Feature: Using REST API write a code to Run, Suspend, Resume, Stop the environment 
 As a User 
 I want to Run, suspend, Resume, stop VM using API.
 
@@ -39,16 +38,21 @@ When I call above API with runstate=Stopped
 Then “Error message will be displayed”
 
 
-Scenario 6: No action is performed if the status is “Busy” 
+Scenario 7: No action is performed if the status is “Busy” 
 Given VM is in Suspended State
-When I tried any operation “Stop”,” Start”, Suspend”
+When I tried any operation “Stop”,” Start”, "Suspend”
 Then No action is performed
 And It gives Error message
 
-Scenario 7: After 30 minutes VM will go in Suspended state
+Scenario 8: After 30 minutes VM will go in Suspended state
 Given A VM is Running 
 When  No action is performed for 30 mins
 Then The VM will be in Suspended State
+
+Scenario 9: Validate Authetication
+Given A Skytap API with configuration ID
+When  I gave Valid Header with Authentication ,Accept,Content-Type
+Then The HttpwebResponse status should be 200
 
 
 
