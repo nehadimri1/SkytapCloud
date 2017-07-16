@@ -1,0 +1,61 @@
+Story: Using REST API write a code to Run, Suspend, Resume, Stop the environment 
+
+As a User 
+I want to Run, suspend, Resume, stop VM using API.
+
+Scenario 1: Running  Stopped VM
+Given A Stopped VM 
+And A sample project  that  already has the above JSON API
+When I call above API with runstate=running
+Then VM is started and in Running state
+
+Scenario 2: Suspend a Running VM
+Given Running VM 
+And A sample project that already has JSON API
+When I Write
+Then VM is in Suspended state.
+
+Scenario 3: Stopping a Running VM
+Given Running VM 
+And A sample project that already has JSON API
+When I Write
+Then VM is in stopped state.
+
+Scenario 4: Restarting a suspended VM
+Given Running VM 
+And A sample project that already has JSON API
+When I Write
+Then VM is in stopped state.
+
+Scenario 5: VM is not starting
+Given Stopped VM
+And A sample project that already has JSON API
+When I tried to Run the VM
+Then It gives the error “The operation cannot be performed at this time. Please try again or contact support.”
+
+Scenario 6: Suspended VM can’t be stop
+Given A VM in Suspended state
+When I tried to stop That
+Then “Error message will be displayed”
+
+
+Scenario 6: No action is performed if the status is “Busy” 
+Given VM is in Suspended State
+When I tried any operation “Stop”,” Start”, Suspend”
+Then No action is performed
+
+Scenario 7: After 30 minutes VM will go in Suspended state
+Given A VM is Running 
+When  No action is performed for 30 mins
+Then The VM will be in Suspended State
+
+
+
+
+
+
+
+
+
+
+

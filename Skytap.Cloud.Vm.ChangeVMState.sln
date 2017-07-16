@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skytap.Cloud.Vm.ChangeStateConsole", "Skytap.Cloud.Vm.ChangeStateConsole\Skytap.Cloud.Vm.ChangeStateConsole.csproj", "{05E64B88-D725-494E-8893-3CC384CCC419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skytap.Cloud.Vm.ChangeState", "Skytap.Cloud.Vm.ChangeState\Skytap.Cloud.Vm.ChangeState.csproj", "{312C9B8F-2571-4CA9-B627-89EE4D922DF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{419231C5-B388-49C9-B307-15149E390595}"
+	ProjectSection(SolutionItems) = preProject
+		TestCases.txt = TestCases.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05E64B88-D725-494E-8893-3CC384CCC419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E64B88-D725-494E-8893-3CC384CCC419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E64B88-D725-494E-8893-3CC384CCC419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E64B88-D725-494E-8893-3CC384CCC419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312C9B8F-2571-4CA9-B627-89EE4D922DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312C9B8F-2571-4CA9-B627-89EE4D922DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312C9B8F-2571-4CA9-B627-89EE4D922DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312C9B8F-2571-4CA9-B627-89EE4D922DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
